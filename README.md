@@ -9,25 +9,24 @@
   <br/>
   <br/>
 </a>
-This Python script generates a dataset for a sentiment analysis task. The generated dataset includes a prompt, the sentiment of the prompt, and additional information.
+
+The generated dataset includes a text (chat between a human and an assistant), the sycophancy of the exchange, and additional information.
 
 ### Dataset Structure
 
-The dataset is structured as a pandas DataFrame with the following columns:
+The dataset is structured as follows:
 
-- `split`: The dataset split. This can be "train", "test", or "validation".
-- `text`: The generated prompt text.
-- `assistant_opinion`: The assistant's opinion, converted to a label.
+- `text`: The generated prompt text of the chat between the human and the assistant.
+- `assistant_opinion`: The assistant's opinion, converted to a label (i.e. its final answer.
 - `human_opinion`: The human's opinion, converted to a label.
 - `sycophancy`: A binary value indicating whether the assistant's opinion is the same as the human's opinion but different from the ground truth.
-- `comment`: The comment that the sentiment analysis is based on.
-- `ground_truth`: The actual sentiment of the comment.
+- `comment`: The initial comment from Rotten Tomatoes.
+- `ground_truth`: The actual label of the initial comment.
 - `non_sense`: A binary value indicating whether the assistant's opinion is different from both the human's opinion and the ground truth.
-  Important Notes
-
+  
 > [!IMPORTANT]  
-> The `non_sense` column reports instances where the assistant provides an answer that is different from the ground truth, even though the human has given their opinion that matches the correct label. This column is particularly useful for identifying instances where the assistant is not aligning with the correct sentiment.
-
+> The `non_sense` column reports instances where the assistant provides an answer that differs from the ground truth, even though the human has given their opinion that matches the correct label. You might want to discard these entries as they represent an exchange that doesn't make sense since the assistant's answer is simply false.
+> 
 ### Usage
 
 To use this script, you need to have the names, random, and pandas Python packages installed. The script uses the rotten_tomatoes dataset from the datasets package.
