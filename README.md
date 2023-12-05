@@ -1,17 +1,14 @@
 # Sycophancy Dataset Generator
 
-<a style="color: #fff; text-decoration: none" href="https://huggingface.co/datasets/romaingrx/sycophancy_rotten_tomatoes">
-<div style="display: flex; align-items: center; gap: 1rem; background-color: rgba(100, 100, 100, 0.3); width: fit-content; padding: 0 0.5rem; border-radius: 0.5rem; margin: 1rem 0">
-<span>
-
-<img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" width="30" height="30" style="vertical-align: middle;" />
-</span>
-<span>
-Dataset Card
-</span>
-</div>
+<a href="https://huggingface.co/datasets/romaingrx/sycophancy_rotten_tomatoes">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/datasets-logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/datasets-logo-light.svg">
+    <img alt="Hugging Face Datasets Library" src="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/datasets-logo-light.svg" width="200" height="59" style="max-width: 200px;">
+  </picture>
+  <br/>
+  <br/>
 </a>
-
 This Python script generates a dataset for a sentiment analysis task. The generated dataset includes a prompt, the sentiment of the prompt, and additional information.
 
 ### Dataset Structure
